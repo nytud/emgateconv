@@ -1,0 +1,690 @@
+
+<?xml version="1.0" encoding="utf-8"?>
+<GateDocument>
+ <!-- The document's features-->
+ <GateDocumentFeatures>
+  <Feature>
+   <Name className="java.lang.String">
+    gate.SourceURL
+   </Name>
+   <Value className="java.lang.String">
+    created from String
+   </Value>
+  </Feature>
+ </GateDocumentFeatures>
+ <!-- The document content area with serialized nodes -->
+ <TextWithNodes>
+  <Node id="0"/>
+  Az
+  <Node id="1"/>
+  <Node id="2"/>
+  alma
+  <Node id="3"/>
+  <Node id="4"/>
+  piros
+  <Node id="5"/>
+  <Node id="6"/>
+  volt
+  <Node id="7"/>
+  .
+  <Node id="8"/>
+  \n
+  <Node id="9"/>
+ </TextWithNodes>
+ <!-- The default annotation set -->
+ <AnnotationSet>
+  <Annotation EndNode="1" Id="0" StartNode="0" Type="Token">
+   <Feature>
+    <Name className="java.lang.String">
+     anas
+    </Name>
+    <Value className="java.util.ArrayList" itemClassName="java.lang.String">
+     {ana=az[/Det|Art.Def]=az, feats=[/Det|Art.Def], lemma=az, readable_ana=az[/Det|Art.Def]};{ana=az[/Det|Pro]=az+[Nom]=, feats=[/Det|Pro][Nom], lemma=az, readable_ana=az[/Det|Pro] + [Nom]};{ana=az[/N|Pro]=az+[Nom]=, feats=[/N|Pro][Nom], lemma=az, readable_ana=az[/N|Pro] + [Nom]}
+    </Value>
+   </Feature>
+   <Feature>
+    <Name className="java.lang.String">
+     lemma
+    </Name>
+    <Value className="java.lang.String">
+     az
+    </Value>
+   </Feature>
+   <Feature>
+    <Name className="java.lang.String">
+     hfstana
+    </Name>
+    <Value className="java.lang.String">
+     [/Det|Art.Def]
+    </Value>
+   </Feature>
+   <Feature>
+    <Name className="java.lang.String">
+     feature
+    </Name>
+    <Value className="java.lang.String">
+     Definite=Def|PronType=Art
+    </Value>
+   </Feature>
+   <Feature>
+    <Name className="java.lang.String">
+     pos
+    </Name>
+    <Value className="java.lang.String">
+     DET
+    </Value>
+   </Feature>
+   <Feature>
+    <Name className="java.lang.String">
+     NP-BIO
+    </Name>
+    <Value className="java.lang.String">
+     B-NP
+    </Value>
+   </Feature>
+   <Feature>
+    <Name className="java.lang.String">
+     NER-BIO1
+    </Name>
+    <Value className="java.lang.String">
+     O
+    </Value>
+   </Feature>
+   <Feature>
+    <Name className="java.lang.String">
+     depType
+    </Name>
+    <Value className="java.lang.String">
+     DET
+    </Value>
+   </Feature>
+   <Feature>
+    <Name className="java.lang.String">
+     depTarget
+    </Name>
+    <Value className="java.lang.Integer">
+     2
+    </Value>
+   </Feature>
+   <Feature>
+    <Name className="java.lang.String">
+     cons
+    </Name>
+    <Value className="java.lang.String">
+     (ROOT(CP(NP*
+    </Value>
+   </Feature>
+   <Feature>
+    <Name className="java.lang.String">
+     string
+    </Name>
+    <Value className="java.lang.String">
+     Az
+    </Value>
+   </Feature>
+   <Feature>
+    <Name className="java.lang.String">
+     length
+    </Name>
+    <Value className="java.lang.Long">
+     2
+    </Value>
+   </Feature>
+   <Feature>
+    <Name className="java.lang.String">
+     kind
+    </Name>
+    <Value className="java.lang.String">
+     word
+    </Value>
+   </Feature>
+  </Annotation>
+  <Annotation EndNode="2" Id="1" StartNode="1" Type="SpaceToken">
+   <Feature>
+    <Name className="java.lang.String">
+     string
+    </Name>
+    <Value className="java.lang.String">
+    </Value>
+   </Feature>
+   <Feature>
+    <Name className="java.lang.String">
+     length
+    </Name>
+    <Value className="java.lang.Long">
+     1
+    </Value>
+   </Feature>
+  </Annotation>
+  <Annotation EndNode="3" Id="2" StartNode="2" Type="Token">
+   <Feature>
+    <Name className="java.lang.String">
+     anas
+    </Name>
+    <Value className="java.util.ArrayList" itemClassName="java.lang.String">
+     {ana=alom[/N]=alm+a[Poss.3Sg]=a+[Nom]=, feats=[/N][Poss.3Sg][Nom], lemma=alom, readable_ana=alom[/N]=alm + a[Poss.3Sg] + [Nom]};{ana=alma[/N]=alma+[Nom]=, feats=[/N][Nom], lemma=alma, readable_ana=alma[/N] + [Nom]}
+    </Value>
+   </Feature>
+   <Feature>
+    <Name className="java.lang.String">
+     lemma
+    </Name>
+    <Value className="java.lang.String">
+     alma
+    </Value>
+   </Feature>
+   <Feature>
+    <Name className="java.lang.String">
+     hfstana
+    </Name>
+    <Value className="java.lang.String">
+     [/N][Nom]
+    </Value>
+   </Feature>
+   <Feature>
+    <Name className="java.lang.String">
+     feature
+    </Name>
+    <Value className="java.lang.String">
+     Case=Nom|Number=Sing
+    </Value>
+   </Feature>
+   <Feature>
+    <Name className="java.lang.String">
+     pos
+    </Name>
+    <Value className="java.lang.String">
+     NOUN
+    </Value>
+   </Feature>
+   <Feature>
+    <Name className="java.lang.String">
+     NP-BIO
+    </Name>
+    <Value className="java.lang.String">
+     E-NP
+    </Value>
+   </Feature>
+   <Feature>
+    <Name className="java.lang.String">
+     NER-BIO1
+    </Name>
+    <Value className="java.lang.String">
+     O
+    </Value>
+   </Feature>
+   <Feature>
+    <Name className="java.lang.String">
+     depType
+    </Name>
+    <Value className="java.lang.String">
+     SUBJ
+    </Value>
+   </Feature>
+   <Feature>
+    <Name className="java.lang.String">
+     depTarget
+    </Name>
+    <Value className="java.lang.Integer">
+     4
+    </Value>
+   </Feature>
+   <Feature>
+    <Name className="java.lang.String">
+     cons
+    </Name>
+    <Value className="java.lang.String">
+     *)
+    </Value>
+   </Feature>
+   <Feature>
+    <Name className="java.lang.String">
+     string
+    </Name>
+    <Value className="java.lang.String">
+     alma
+    </Value>
+   </Feature>
+   <Feature>
+    <Name className="java.lang.String">
+     length
+    </Name>
+    <Value className="java.lang.Long">
+     4
+    </Value>
+   </Feature>
+   <Feature>
+    <Name className="java.lang.String">
+     kind
+    </Name>
+    <Value className="java.lang.String">
+     word
+    </Value>
+   </Feature>
+  </Annotation>
+  <Annotation EndNode="4" Id="3" StartNode="3" Type="SpaceToken">
+   <Feature>
+    <Name className="java.lang.String">
+     string
+    </Name>
+    <Value className="java.lang.String">
+    </Value>
+   </Feature>
+   <Feature>
+    <Name className="java.lang.String">
+     length
+    </Name>
+    <Value className="java.lang.Long">
+     1
+    </Value>
+   </Feature>
+  </Annotation>
+  <Annotation EndNode="5" Id="4" StartNode="4" Type="Token">
+   <Feature>
+    <Name className="java.lang.String">
+     anas
+    </Name>
+    <Value className="java.util.ArrayList" itemClassName="java.lang.String">
+     {ana=piros[/Adj|col]=piros+[Nom]=, feats=[/Adj][Nom], lemma=piros, readable_ana=piros[/Adj|col] + [Nom]}
+    </Value>
+   </Feature>
+   <Feature>
+    <Name className="java.lang.String">
+     lemma
+    </Name>
+    <Value className="java.lang.String">
+     piros
+    </Value>
+   </Feature>
+   <Feature>
+    <Name className="java.lang.String">
+     hfstana
+    </Name>
+    <Value className="java.lang.String">
+     [/Adj][Nom]
+    </Value>
+   </Feature>
+   <Feature>
+    <Name className="java.lang.String">
+     feature
+    </Name>
+    <Value className="java.lang.String">
+     Case=Nom|Degree=Pos|Number=Sing
+    </Value>
+   </Feature>
+   <Feature>
+    <Name className="java.lang.String">
+     pos
+    </Name>
+    <Value className="java.lang.String">
+     ADJ
+    </Value>
+   </Feature>
+   <Feature>
+    <Name className="java.lang.String">
+     NP-BIO
+    </Name>
+    <Value className="java.lang.String">
+     1-NP
+    </Value>
+   </Feature>
+   <Feature>
+    <Name className="java.lang.String">
+     NER-BIO1
+    </Name>
+    <Value className="java.lang.String">
+     O
+    </Value>
+   </Feature>
+   <Feature>
+    <Name className="java.lang.String">
+     depType
+    </Name>
+    <Value className="java.lang.String">
+     PRED
+    </Value>
+   </Feature>
+   <Feature>
+    <Name className="java.lang.String">
+     depTarget
+    </Name>
+    <Value className="java.lang.Integer">
+     4
+    </Value>
+   </Feature>
+   <Feature>
+    <Name className="java.lang.String">
+     cons
+    </Name>
+    <Value className="java.lang.String">
+     (NP*)
+    </Value>
+   </Feature>
+   <Feature>
+    <Name className="java.lang.String">
+     string
+    </Name>
+    <Value className="java.lang.String">
+     piros
+    </Value>
+   </Feature>
+   <Feature>
+    <Name className="java.lang.String">
+     length
+    </Name>
+    <Value className="java.lang.Long">
+     5
+    </Value>
+   </Feature>
+   <Feature>
+    <Name className="java.lang.String">
+     kind
+    </Name>
+    <Value className="java.lang.String">
+     word
+    </Value>
+   </Feature>
+  </Annotation>
+  <Annotation EndNode="6" Id="5" StartNode="5" Type="SpaceToken">
+   <Feature>
+    <Name className="java.lang.String">
+     string
+    </Name>
+    <Value className="java.lang.String">
+    </Value>
+   </Feature>
+   <Feature>
+    <Name className="java.lang.String">
+     length
+    </Name>
+    <Value className="java.lang.Long">
+     1
+    </Value>
+   </Feature>
+  </Annotation>
+  <Annotation EndNode="7" Id="6" StartNode="6" Type="Token">
+   <Feature>
+    <Name className="java.lang.String">
+     anas
+    </Name>
+    <Value className="java.util.ArrayList" itemClassName="java.lang.String">
+     {ana=van[/V]=vol+t[Pst.NDef.3Sg]=t, feats=[/V][Pst.NDef.3Sg], lemma=van, readable_ana=van[/V]=vol + t[Pst.NDef.3Sg]};{ana=van[/V]=vol+t[_PerfPtcp/Adj]=t+[Nom]=, feats=[/Adj][Nom], lemma=volt, readable_ana=van[/V]=vol + t[_PerfPtcp/Adj] + [Nom]};{ana=volt[/Adj|Attr]=volt+[Nom]=, feats=[/Adj|Attr][Nom], lemma=volt, readable_ana=volt[/Adj|Attr] + [Nom]};{ana=volt[/N|Unit]=volt+[Nom]=, feats=[/N][Nom], lemma=volt, readable_ana=volt[/N|Unit] + [Nom]}
+    </Value>
+   </Feature>
+   <Feature>
+    <Name className="java.lang.String">
+     lemma
+    </Name>
+    <Value className="java.lang.String">
+     van
+    </Value>
+   </Feature>
+   <Feature>
+    <Name className="java.lang.String">
+     hfstana
+    </Name>
+    <Value className="java.lang.String">
+     [/V][Pst.NDef.3Sg]
+    </Value>
+   </Feature>
+   <Feature>
+    <Name className="java.lang.String">
+     feature
+    </Name>
+    <Value className="java.lang.String">
+     Definite=Ind|Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin|Voice=Act
+    </Value>
+   </Feature>
+   <Feature>
+    <Name className="java.lang.String">
+     pos
+    </Name>
+    <Value className="java.lang.String">
+     VERB
+    </Value>
+   </Feature>
+   <Feature>
+    <Name className="java.lang.String">
+     NP-BIO
+    </Name>
+    <Value className="java.lang.String">
+     O
+    </Value>
+   </Feature>
+   <Feature>
+    <Name className="java.lang.String">
+     NER-BIO1
+    </Name>
+    <Value className="java.lang.String">
+     O
+    </Value>
+   </Feature>
+   <Feature>
+    <Name className="java.lang.String">
+     depType
+    </Name>
+    <Value className="java.lang.String">
+     ROOT
+    </Value>
+   </Feature>
+   <Feature>
+    <Name className="java.lang.String">
+     depTarget
+    </Name>
+    <Value className="java.lang.Integer">
+     0
+    </Value>
+   </Feature>
+   <Feature>
+    <Name className="java.lang.String">
+     cons
+    </Name>
+    <Value className="java.lang.String">
+     (V_(V0*))
+    </Value>
+   </Feature>
+   <Feature>
+    <Name className="java.lang.String">
+     string
+    </Name>
+    <Value className="java.lang.String">
+     volt
+    </Value>
+   </Feature>
+   <Feature>
+    <Name className="java.lang.String">
+     length
+    </Name>
+    <Value className="java.lang.Long">
+     4
+    </Value>
+   </Feature>
+   <Feature>
+    <Name className="java.lang.String">
+     kind
+    </Name>
+    <Value className="java.lang.String">
+     word
+    </Value>
+   </Feature>
+  </Annotation>
+  <Annotation EndNode="8" Id="7" StartNode="7" Type="Token">
+   <Feature>
+    <Name className="java.lang.String">
+     anas
+    </Name>
+    <Value className="java.util.ArrayList" itemClassName="java.lang.String">
+     {ana=, feats=[Punct], lemma=., readable_ana=}
+    </Value>
+   </Feature>
+   <Feature>
+    <Name className="java.lang.String">
+     lemma
+    </Name>
+    <Value className="java.lang.String">
+     .
+    </Value>
+   </Feature>
+   <Feature>
+    <Name className="java.lang.String">
+     hfstana
+    </Name>
+    <Value className="java.lang.String">
+     [Punct]
+    </Value>
+   </Feature>
+   <Feature>
+    <Name className="java.lang.String">
+     feature
+    </Name>
+    <Value className="java.lang.String">
+     _
+    </Value>
+   </Feature>
+   <Feature>
+    <Name className="java.lang.String">
+     pos
+    </Name>
+    <Value className="java.lang.String">
+     PUNCT
+    </Value>
+   </Feature>
+   <Feature>
+    <Name className="java.lang.String">
+     NP-BIO
+    </Name>
+    <Value className="java.lang.String">
+     O
+    </Value>
+   </Feature>
+   <Feature>
+    <Name className="java.lang.String">
+     NER-BIO1
+    </Name>
+    <Value className="java.lang.String">
+     O
+    </Value>
+   </Feature>
+   <Feature>
+    <Name className="java.lang.String">
+     depType
+    </Name>
+    <Value className="java.lang.String">
+     PUNCT
+    </Value>
+   </Feature>
+   <Feature>
+    <Name className="java.lang.String">
+     depTarget
+    </Name>
+    <Value className="java.lang.Integer">
+     0
+    </Value>
+   </Feature>
+   <Feature>
+    <Name className="java.lang.String">
+     cons
+    </Name>
+    <Value className="java.lang.String">
+     *))
+    </Value>
+   </Feature>
+   <Feature>
+    <Name className="java.lang.String">
+     string
+    </Name>
+    <Value className="java.lang.String">
+     .
+    </Value>
+   </Feature>
+   <Feature>
+    <Name className="java.lang.String">
+     length
+    </Name>
+    <Value className="java.lang.Long">
+     1
+    </Value>
+   </Feature>
+   <Feature>
+    <Name className="java.lang.String">
+     kind
+    </Name>
+    <Value className="java.lang.String">
+     word
+    </Value>
+   </Feature>
+  </Annotation>
+  <Annotation EndNode="9" Id="8" StartNode="8" Type="SpaceToken">
+   <Feature>
+    <Name className="java.lang.String">
+     string
+    </Name>
+    <Value className="java.lang.String">
+     \n
+    </Value>
+   </Feature>
+   <Feature>
+    <Name className="java.lang.String">
+     length
+    </Name>
+    <Value className="java.lang.Long">
+     2
+    </Value>
+   </Feature>
+  </Annotation>
+  <Annotation EndNode="9" Id="9" StartNode="0" Type="Sentence">
+   <Feature>
+    <Name className="java.lang.String">
+     string
+    </Name>
+    <Value className="java.lang.String">
+     Az alma piros volt.\n
+    </Value>
+   </Feature>
+   <Feature>
+    <Name className="java.lang.String">
+     length
+    </Name>
+    <Value className="java.lang.Long">
+     21
+    </Value>
+   </Feature>
+  </Annotation>
+  <Annotation EndNode="2" Id="10" StartNode="0" Type="NP">
+   <Feature>
+    <Name className="java.lang.String">
+     childIds
+    </Name>
+    <Value className="java.util.ArrayList" itemClassName="java.lang.String">
+     0;2
+    </Value>
+   </Feature>
+   <Feature>
+    <Name className="java.lang.String">
+     text
+    </Name>
+    <Value className="java.lang.String">
+     Az alma
+    </Value>
+   </Feature>
+  </Annotation>
+  <Annotation EndNode="4" Id="11" StartNode="4" Type="NP">
+   <Feature>
+    <Name className="java.lang.String">
+     childIds
+    </Name>
+    <Value className="java.util.ArrayList" itemClassName="java.lang.String">
+     4
+    </Value>
+   </Feature>
+   <Feature>
+    <Name className="java.lang.String">
+     text
+    </Name>
+    <Value className="java.lang.String">
+     piros
+    </Value>
+   </Feature>
+  </Annotation>
+ </AnnotationSet>
+</GateDocument>
