@@ -226,7 +226,7 @@
      depTarget
     </Name>
     <Value className="java.lang.Integer">
-     4
+     6
     </Value>
    </Feature>
    <Feature>
@@ -349,7 +349,7 @@
      depTarget
     </Name>
     <Value className="java.lang.Integer">
-     4
+     6
     </Value>
    </Feature>
    <Feature>
@@ -472,7 +472,6 @@
      depTarget
     </Name>
     <Value className="java.lang.Integer">
-     0
     </Value>
    </Feature>
    <Feature>
@@ -578,7 +577,6 @@
      depTarget
     </Name>
     <Value className="java.lang.Integer">
-     0
     </Value>
    </Feature>
    <Feature>
@@ -632,7 +630,7 @@
     </Value>
    </Feature>
   </Annotation>
-  <Annotation EndNode="9" Id="9" StartNode="0" Type="Sentence">
+  <Annotation EndNode="8" Id="9" StartNode="0" Type="Sentence">
    <Feature>
     <Name className="java.lang.String">
      string
@@ -650,7 +648,7 @@
     </Value>
    </Feature>
   </Annotation>
-  <Annotation EndNode="2" Id="10" StartNode="0" Type="NP">
+  <Annotation EndNode="3" Id="10" StartNode="0" Type="NP">
    <Feature>
     <Name className="java.lang.String">
      childIds
@@ -668,7 +666,7 @@
     </Value>
    </Feature>
   </Annotation>
-  <Annotation EndNode="4" Id="11" StartNode="4" Type="NP">
+  <Annotation EndNode="5" Id="11" StartNode="4" Type="NP">
    <Feature>
     <Name className="java.lang.String">
      childIds

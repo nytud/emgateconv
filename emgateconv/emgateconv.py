@@ -64,31 +64,30 @@ class EmGATEConv:
         self._text = []
         self._xml = BeautifulSoup(self._skeleton, 'lxml-xml')
         self._text_with_nodes = self._xml.find('TextWithNodes')
-        self._annotation_set = self._xml.find('AnnotationSet')
+        self._annotations = self._xml.find('AnnotationSet')
 
     def process_sentence(self, sen, field_names):
         sent_start = self._gid
         nps = []
         nes = []
-        for tok in sen:
-            feat_tags = [self._create_feature(gate_featname, tok[field_names[feat]])
-                         for feat, gate_featname in self._emtsv_to_gate_header.items()
-                         if feat in field_names.keys()]
-            np_bio_index = field_names.get('NP-BIO')
-            if np_bio_index is not None:
-                np_bio = tok[np_bio_index]
-                if np_bio != 'O':
-                    self._handle_bio(nps, self._gid, self._aid, np_bio)
+        tok_ids = {'0': ''}
+        annotations = []
+        for i, tok in enumerate(sen, start=1):
+            # Gather features
+            feats = {gate_featname: tok[field_names[feat]]
+                     for feat, gate_featname in self._emtsv_to_gate_header.items()
+                     if feat in field_names.keys()}
 
-            ne_bio_index = field_names.get('NER-BIO')
-            if ne_bio_index is not None:
-                ne_bio = tok[ne_bio_index]
-                if ne_bio != 'O':
-                    self._handle_bio(nes, self._gid, self._aid, ne_bio)
+            # Gather chunk pars
+            self._handle_bio(nps, self._gid, self._aid, tok, field_names.get('NP-BIO'))
+            self._handle_bio(nes, self._gid, self._aid, tok, field_names.get('NER-BIO'))
 
+            # Note ID mapping
+            tok_ids[str(i)] = self._gid
+
+            # Number tokens and group properties (eg. features)
             form = tok[field_names['form']]
-            new_tok = self._create_annot(form, self._aid, self._gid, feat_tags)
-            self._annotation_set.append(new_tok)
+            annotations.append((form, self._aid, self._gid, feats, 'Token'))
             self._text.append(form)
             self._aid += 1
             self._gid += 1
@@ -97,19 +96,25 @@ class EmGATEConv:
             ws_after = tok[field_names['wsafter']]
             if len(ws_after) > 2:
                 wsafter_value = ws_after[1:-1]
-                new_tok = self._create_annot(wsafter_value, self._aid, self._gid, [], tok_type='SpaceToken')
-                self._annotation_set.append(new_tok)
+                annotations.append((wsafter_value, self._aid, self._gid, {}, 'SpaceToken'))
                 self._text.append(wsafter_value)
                 self._aid += 1
                 self._gid += 1
         else:
+            # Put Token annotations with mapped IDs
+            self._annotations.extend(self._create_annot(form, aid, gid, self._conv_feats(feats, tok_ids), etype)
+                                     for form, aid, gid, feats, etype in annotations)
+
+            # Add Sentence annotations
             new_sent = self._create_annot(''.join(self._text[sent_start:self._gid + 1]), self._aid, sent_start, [],
-                                          tok_type='Sentence', end_gid=self._gid)
-            self._annotation_set.append(new_sent)
+                                          tok_type='Sentence', end_gid=self._gid - 1)
+            self._annotations.append(new_sent)
             self._aid += 1
-            self._put_entitiy_annot('NP', self._aid, self._annotation_set, nps, self._text)
+
+            # Add entity annotations
+            self._put_entitiy_annot('NP', self._aid, self._annotations, nps, self._text)
             self._aid += len(nps)
-            self._put_entitiy_annot('NE', self._aid, self._annotation_set, nes, self._text)
+            self._put_entitiy_annot('NE', self._aid, self._annotations, nes, self._text)
             self._aid += len(nes)
 
         return []  # Finaliser!
@@ -125,6 +130,13 @@ class EmGATEConv:
             nodes.append(self._bs_obj.new_tag('Node', attrs={'id': i}))
         self._text_with_nodes.extend(nodes)
         yield from self._xml.prettify()
+        # Reset...
+        self._gid = 0
+        self._aid = 0
+        self._text = []
+        self._xml = BeautifulSoup(self._skeleton, 'lxml-xml')
+        self._text_with_nodes = self._xml.find('TextWithNodes')
+        self._annotations = self._xml.find('AnnotationSet')
 
     @staticmethod
     def _reformat_anas(ana):
@@ -181,13 +193,29 @@ class EmGATEConv:
 
         return new_tok_tag
 
+    def _conv_feats(self, feats, tok_ids):
+        feats_tag = []
+        for gate_featname, feat_val in feats.items():
+            if gate_featname == 'depTarget':
+                feat_val = tok_ids[feat_val]  # Convert depTargets to GATE IDs
+            feats_tag.append(self._create_feature(gate_featname, feat_val))
+        return feats_tag
+
     @staticmethod
-    def _handle_bio(elems, global_id, annotation_id, bio):
-        if bio.startswith(('B', '1', 'S')):
+    def _handle_bio(elems, global_id, annotation_id, tok, ne_bio_index):
+        if ne_bio_index is not None:
+            bio = tok[ne_bio_index]
+        else:
+            return
+        if bio == 'O':
+            pass
+        elif bio.startswith('B'):
             elems.append([[global_id], [str(annotation_id)]])
         elif bio.startswith(('I', 'E')):
-            elems[-1][0].append(global_id)
+            elems[-1][0].append(global_id + 1)
             elems[-1][1].append(str(annotation_id))
+        elif bio.startswith(('1', 'S')):
+            elems.append([[global_id, global_id + 1], [str(annotation_id)]])
         else:
             raise ValueError(f'Unknown state: {bio}')
 
