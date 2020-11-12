@@ -25,7 +25,7 @@ setuptools.setup(
     ],
     python_requires='>=3.6',
     install_requires=['xtsv>=1.1,<2.0',  # TODO: List dependencies at only one file requirements.txt vs. setup.py
-                      ],
+                      'beautifulsoup4'],
     include_package_data=True,
     entry_points={
         'console_scripts': [
